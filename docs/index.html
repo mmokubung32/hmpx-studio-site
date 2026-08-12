@@ -1,211 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMPX Studio | Structured Web Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HMPX Studio | Website Design & Digital Solutions</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="theme-color" content="#2563c4">
+  <meta name="description"
+  content="HMPX Studio designs fast, modern websites for startups and growing businesses. We also provide AI, cloud and IT solutions to help businesses build a stronger online presence.">
+  <meta name="author" content="HMPX Studio">
+  <meta name="robots" content="index, follow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HMPX Studio | Website Design & Digital Solutions">
+  <meta name="twitter:description" content="Professional website design, AI, cloud and IT solutions that help businesses grow online.">
+  <meta name="twitter:image" content="https://www.hmpxstudio.co.za/assets/images/social-preview.png">
+  <meta property="og:title" content="HMPX Studio | Website Design & Digital Solutions">
+  <meta property="og:description" content="Professional website design, AI, cloud and IT solutions that help businesses grow online.">
+  <meta property="og:image" content="https://www.hmpxstudio.co.za/assets/images/social-preview.png">
+  <meta property="og:url" content="https://www.hmpxstudio.co.za/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HMPX Studio">
+  <link rel="canonical" href="https://www.hmpxstudio.co.za/">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta property="og:locale" content="en_ZA">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HMPX Studio",
+    "url": "https://www.hmpxstudio.co.za/",
+    "logo": "https://www.hmpxstudio.co.za/assets/images/logo.png",
+    "description": "HMPX Studio designs fast, modern websites for startups and growing businesses. We also provide AI, cloud and IT solutions to help businesses build a stronger online presence.",
+    "email": "mailto:mmokubung32@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Michael Mokubung"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "South Africa"
+    },
+    "sameAs": [
+      "https://www.facebook.com/@hmpxstudio"
+    ]
+  }
+  </script>
 
 </head>
-
 <body>
-    <nav class="nav-bar">
-        <div class="nav-logo">
-            <div class="nav-logo-icon">
-                <img src="assets/images/WlogoH.png" alt ="logo">
-            </div>
-            <span class="nav-logo-text">Structured web solutions</span>
-        </div>
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-links" id="navLinks">
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>HMP<span>X</span> Studio</h1>
-            <h3>Structured web solutions.</h3>
-            <p>
-                We design and build clean, reliable websites for small businesses that need a professional online presence.
+<!-- NAV -->
+<nav id="mn">
+  <a href="#" class="logo" onclick="go('home'); return false;" aria-label="HMPX Studio Home">
+    HMP<span class="xb">X</span>
+    <span class="sep"></span>
+    <span class="tl">Structured Web Solutions</span>
+  </a>
+
+  <div class="navlinks">
+    <a href="#" onclick="go('home'); return false">Home</a>
+    <a href="#" onclick="go('services'); return false">Services</a>
+    <a href="#" onclick="go('work'); return false">Work</a>
+    <a href="#" onclick="go('about'); return false">About</a>
+    <a href="#" onclick="go('reviews'); return false">Reviews</a>
+    <a href="#" class="navcta" onclick="go('contact'); return false">Get a Website</a>
+  </div>
+
+  <button class="navburger" id="navburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="go('home'); closeMenu(); return false">Home</a>
+  <a href="#" onclick="go('services'); closeMenu(); return false">Services</a>
+  <a href="#" onclick="go('work'); closeMenu(); return false">Work</a>
+  <a href="#" onclick="go('about'); closeMenu(); return false">About</a>
+  <a href="#" onclick="go('reviews'); closeMenu(); return false">Reviews</a>
+  <a href="#" class="mm-cta" onclick="go('contact'); closeMenu(); return false">Get a Website →</a>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop" onclick="closeMenu()"></div>
+
+<!-- ══════ HOME ══════ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-in">
+      <div>
+        <div class="hero-badge"><div class="hero-dot"></div><span>Available for projects · South Africa</span></div>
+        <h1>HMP<span class="xb">X</span><span class="sub">Studio.</span></h1>
+        <p class="hero-desc">We design and build clean, reliable websites for small businesses that need a professional online presence — structured, purposeful, and built to last.</p>
+        <div class="hero-acts">
+          <a href="#" class="btn-p" onclick="go('contact');return false">Get a Website →</a>
+          <a href="#" class="btn-ol" onclick="go('work');return false">View Our Work</a>
+        </div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-top">
+          <div class="hc-dot" style="background:#22c55e"></div>
+          <div class="hc-dot" style="background:rgba(255,255,255,.14);margin-left:-4px"></div>
+          <div class="hc-lbl">Project Dashboard</div>
+        </div>
+        <div class="hstats">
+          <div class="hstat"><div class="hstat-v">100%</div><div class="hstat-l">Custom code</div></div>
+          <div class="hstat"><div class="hstat-v">Fast</div><div class="hstat-l">Load times</div></div>
+          <div class="hstat"><div class="hstat-v">Mobile</div><div class="hstat-l">First design</div></div>
+          <div class="hstat"><div class="hstat-v">SEO</div><div class="hstat-l">Ready structure</div></div>
+        </div>
+        <div class="hpills">
+          <div class="hpill"><div class="hpill-ic">🏗️</div><div class="hpill-t"><strong>Active build:</strong> Business website in progress</div></div>
+          <div class="hpill"><div class="hpill-ic">✅</div><div class="hpill-t"><strong>Deployment:</strong> All sites fully tested before launch</div></div>
+          <div class="hpill"><div class="hpill-ic">📍</div><div class="hpill-t"><strong>Based in:</strong> South Africa — serving clients everywhere</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-tr">
+      <span class="ticker-i">Website Design<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Business Websites<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Responsive Layouts<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">SEO-Ready Structure<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Website Maintenance<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Front-End Development<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">South Africa<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Website Design<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Business Websites<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Responsive Layouts<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">SEO-Ready Structure<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Website Maintenance<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">Front-End Development<span class="ticker-dot"> ·</span></span>
+      <span class="ticker-i">South Africa<span class="ticker-dot"> ·</span></span>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sh fu">
+        <div class="ey">What We Do</div>
+        <h2 class="sttl">Everything your business needs<br>to get online, <em>properly.</em></h2>
+        <p class="ssub">Focused services tailored for small businesses — no bloat, no confusion, no unnecessary complexity.</p>
+      </div>
+      <div class="svgrid fu">
+        <div class="svc"><div class="svc-ic">🏗️</div><h3>Website Design & Build</h3><p>Handcrafted websites with clean structure, responsive design, and fast load times.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🏢</div><h3>Business Websites</h3><p>Professional websites designed to represent your brand and convert visitors into clients.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🔄</div><h3>Website Redesigns</h3><p>Modernise an outdated site with better structure, clarity, and a fresh professional look.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🔧</div><h3>Maintenance & Support</h3><p>Ongoing updates, content changes, and performance monitoring so your site stays current.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🔍</div><h3>Basic SEO Setup</h3><p>Proper meta tags, heading hierarchy, and site structure for a strong technical foundation.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">📱</div><h3>Mobile-First Design</h3><p>Every site tested across phones, tablets, and desktops — designed for every screen size.</p><div class="svc-arr">→</div></div>
+      </div>
+      <div style="text-align:center;margin-top:32px" class="fu">
+        <a href="#" class="btn-g" onclick="go('services');return false">View All Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">How We Work</div><h2 class="sttl">Simple. Structured.<br><em>No surprises.</em></h2></div>
+      <div class="proc-w fu">
+        <div class="proc-steps">
+          <div class="proc-step"><div class="proc-n">01</div><h3>Plan</h3><p>We learn your business, goals, and audience before writing a single line of code.</p></div>
+          <div class="proc-step"><div class="proc-n">02</div><h3>Build</h3><p>We design and develop your site — responsive, structured, and aligned with your brand.</p></div>
+          <div class="proc-step"><div class="proc-n">03</div><h3>Launch</h3><p>We test across devices, refine the details, and deploy when it's ready.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cl-bg">
+    <section class="sec-sm">
+      <div class="wrap">
+        <div class="sh fu" style="margin-bottom:32px"><div class="ey">Clients & Partners</div><h2 class="sttl">Trusted by growing<br><em>South African businesses.</em></h2></div>
+        <div class="cl-grid fu">
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🛒</div><div class="cl-nm">ShopNow</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🏥</div><div class="cl-nm">Sebenzani Global</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🏠</div><div class="cl-nm">Black is back</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">⚖️</div><div class="cl-nm">Impokopoko Lifestyle</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🎨</div><div class="cl-nm">CreativeCo</div></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="cta"><h2>Ready to get your business online?</h2><p>Let's build something you're proud to show off.</p><a href="#" class="btn-w" onclick="go('contact');return false">Start a Project →</a></div>
+
+</div>
+
+<!-- ══════ SERVICES ══════ -->
+<div class="page" id="page-services">
+  <section class="sec" style="padding-top:120px">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">Services</div><h2 class="sttl">What HMPX Studio<br>can do for <em>you.</em></h2><p class="ssub">Focused web services for small businesses who want a professional online presence without the agency price tag.</p></div>
+      <div class="svgrid fu">
+        <div class="svc"><div class="svc-ic">🏗️</div><h3>Website Design & Build</h3><p>Purpose-built websites with clean structure and thoughtful design. Every site is crafted from the ground up around your brand, goals, and audience.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🏢</div><h3>Business Websites</h3><p>Professional multi-page sites for businesses, consultants, and service providers. Designed to establish credibility and drive enquiries.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🔄</div><h3>Website Redesigns</h3><p>Existing website that looks outdated? We modernise the design and improve the structure without starting from scratch.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🔧</div><h3>Maintenance & Support</h3><p>Monthly retainer packages for content updates, minor layout changes, performance checks, and basic security monitoring.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">🔍</div><h3>Basic SEO Setup</h3><p>Proper meta tags, heading hierarchy, page titles, Open Graph setup, and site structure for the best technical foundation.</p><div class="svc-arr">→</div></div>
+        <div class="svc"><div class="svc-ic">📱</div><h3>Mobile-First Design</h3><p>Every site tested across phones, tablets, and desktops. Responsive layouts that don't just shrink — they adapt intelligently.</p><div class="svc-arr">→</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--g50);border-top:1px solid var(--g100);border-bottom:1px solid var(--g100)">
+    <section class="sec">
+      <div class="wrap">
+        <div class="sh fu"><div class="ey">Packages</div><h2 class="sttl">Simple, transparent<br><em>packages.</em></h2><p class="ssub">No hidden fees. No confusing tiers. Just the work you need, priced fairly.</p></div>
+        <div class="pkg-grid fu">
+          <div class="pkg">
+            <h3>Starter</h3>
+            <div class="pkg-price">R2,500 <span>–</span> R4,000</div>
+            <div class="pkg-sub">One-time · Delivery in 5–7 working days</div>
+            <ul class="pkg-list">
+              <li><span class="chk">✓</span>1–3 page static website</li>
+              <li><span class="chk">✓</span>Mobile responsive design</li>
+              <li><span class="chk">✓</span>Contact form</li>
+              <li><span class="chk">✓</span>Basic SEO setup</li>
+              <li><span class="chk">✓</span>1 revision round</li>
+              <li><span class="chk">✓</span>Deployment assistance</li>
+            </ul>
+            <a href="#" class="pkg-btn" onclick="go('contact');return false">Get in Touch</a>
+          </div>
+          <div class="pkg ft">
+            <div class="pkg-badge">Most Popular</div>
+            <h3>Business</h3>
+            <div class="pkg-price">R5,000 <span>–</span> R8,000</div>
+            <div class="pkg-sub">One-time · Delivery in 7–14 working days</div>
+            <ul class="pkg-list">
+              <li><span class="chk">✓</span>4–6 page static website</li>
+              <li><span class="chk">✓</span>Custom layout & styling</li>
+              <li><span class="chk">✓</span>Mobile-first design</li>
+              <li><span class="chk">✓</span>Contact & inquiry forms</li>
+              <li><span class="chk">✓</span>SEO-ready structure</li>
+              <li><span class="chk">✓</span>2 revision rounds</li>
+              <li><span class="chk">✓</span>Launch support</li>
+            </ul>
+            <a href="#" class="pkg-btn" onclick="go('contact');return false">Get in Touch</a>
+          </div>
+          <div class="pkg">
+            <h3>Maintenance</h3>
+            <div class="pkg-price">R500 <span>–</span> R1,200</div>
+            <div class="pkg-sub">Per month · Monthly retainer</div>
+            <ul class="pkg-list">
+              <li><span class="chk">✓</span>Content updates</li>
+              <li><span class="chk">✓</span>Minor layout changes</li>
+              <li><span class="chk">✓</span>Performance & uptime checks</li>
+              <li><span class="chk">✓</span>Basic security monitoring</li>
+              <li><span class="chk">✓</span>Monthly progress report</li>
+            </ul>
+            <a href="#" class="pkg-btn" onclick="go('contact');return false">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">Process</div><h2 class="sttl">From enquiry to launch —<br><em>here's how it works.</em></h2></div>
+      <div class="proc-w fu">
+        <div class="proc-steps">
+          <div class="proc-step"><div class="proc-n">01</div><h3>Discovery</h3><p>We discuss your business, goals, and audience. No obligation, no pressure.</p></div>
+          <div class="proc-step"><div class="proc-n">02</div><h3>Proposal</h3><p>A clear scope of work, timeline, and pricing. You approve before anything starts.</p></div>
+          <div class="proc-step"><div class="proc-n">03</div><h3>Build & Launch</h3><p>Development begins. Drafts, revisions, then deployment when it's ready.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta"><h2>Not sure which package fits?</h2><p>Get in touch — we'll figure it out together.</p><a href="#" class="btn-w" onclick="go('contact');return false">Talk to Us →</a></div>
+</div>
+
+<!-- ══════ WORK ══════ -->
+<div class="page" id="page-work">
+  <section class="sec" style="padding-top:120px">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">Current Projects</div><h2 class="sttl">What's on the<br><em>build board right now.</em></h2><p class="ssub">A look at what's actively in progress. Availability updates as projects move toward launch.</p></div>
+      <div class="cp-grid fu">
+        <div class="cp-card">
+          <div class="cp-top"><span class="cp-status cp-active">● In Progress</span><span class="cp-eta">Est. launch: Sep 2026</span></div>
+          <h3>HMPX Studio Ops Dashboard</h3>
+          <p>Internal business operations dashboard — analytics, lead management, and project tracking in one platform. Currently in the build & testing phase.</p>
+          <div class="cp-bar"><div class="cp-fill" style="width:70%"></div></div>
+          <div class="cp-pct">70% complete</div>
+        </div>
+        <div class="cp-card">
+          <div class="cp-top"><span class="cp-status cp-planning">● Planning</span><span class="cp-eta">Kickoff: Q3 2026</span></div>
+          <h3>New Client — Retail Website</h3>
+          <p>A multi-page business website for a growing retail brand. Currently in the discovery and scoping phase ahead of design work.</p>
+          <div class="cp-bar"><div class="cp-fill" style="width:15%"></div></div>
+          <div class="cp-pct">15% complete</div>
+        </div>
+        <div class="cp-card cp-open">
+          <div class="cp-ic">📩</div>
+          <h3>Got a project in mind?</h3>
+          <p>We're currently taking on new bookings for Q3–Q4 2026. Reach out to lock in a build slot.</p>
+          <a href="#" class="btn-g" onclick="go('contact');return false">Start a Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">Featured Work</div><h2 class="sttl">Projects built with<br><em>purpose and precision.</em></h2><p class="ssub">A selection of websites built for real businesses — from concept to deployment.</p></div>
+      <div class="wk-grid fu">
+        
+        <div class="wk s2">
+          <img src="assets/images/responsive-business-website.webp" alt="responsive-business-website" class="responsive-image">
+          <!--
+          <div class="wk-th"><div class="wk-sc"><div class="wk-si"><div class="wb bl" style="width:35%"></div><div class="wb w80" style="margin-top:4px"></div><div class="wb w60"></div><div class="wbs"><div class="wbl bl"></div><div class="wbl"></div><div class="wbl"></div></div><div class="wb w80" style="margin-top:3px"></div><div class="wb w40"></div></div></div></div>
+          -->
+          <div class="wk-inf"><div class="wk-tags"><span class="wk-tag">Business Website</span><span class="wk-tag">Multi-page</span><span class="wk-tag">SEO</span></div><h3>Black is Back Projects</h3><p>Business services website designed to generate enquiries — showcasing ceiling installations, tiling, electrical work, custom carpentry, a project gallery, referral programme, and a streamlined quote request system.</p></div>
+        </div>
+<div class="wk">
+          <img src="assets/images/saas-analytics-dashboard-design.webp" alt="Impokopoko Lifestyle" class="responsive-image">
+          <!--
+          <div class="wk-th" style="background:#060e1c"><div class="wk-sc" style="background:#0b1628"><div class="wk-si"><div class="wb" style="background:#93c5fd;width:38%"></div><div class="wb w60" style="margin-top:4px"></div><div class="wbs" style="grid-template-columns:1fr 1fr"><div class="wbl" style="background:rgba(147,197,253,.14)"></div><div class="wbl" style="background:rgba(147,197,253,.07)"></div></div><div class="wb w80" style="margin-top:3px"></div></div></div></div>
+          -->
+
+          <div class="wk-inf"><div class="wk-tags"><span class="wk-tag">Business Operations Dashboard</span><span class="wk-tag">Enterprise Dashboard</span></div><h3>HMPX Studio Ops Dashboard</h3><p>Enterprise-grade dashboard built for growing businesses — combining real-time analytics, lead management, financial tracking, project oversight, client records, and marketing performance into a single intuitive platform.</p></div>
+
+        </div>
+        <div class="wk">
+          <img src="assets/images/website-design-johannesburg.webp" alt="Website-design-Johannesburg" class="responsive-image">
+          <!--
+          <div class="wk-th" style="background:#0a1628"><div class="wk-sc" style="background:#0f1e38"><div class="wk-si"><div class="wb" style="background:#3b82f6;width:30%"></div><div class="wb w80" style="margin-top:4px"></div><div class="wb" style="width:55%"></div><div class="wbs"><div class="wbl" style="background:rgba(59,130,246,.22)"></div><div class="wbl" style="background:rgba(59,130,246,.12)"></div><div class="wbl"></div></div></div></div></div>
+          -->
+          <div class="wk-inf"><div class="wk-tags"><span class="wk-tag">Business Website</span><span class="wk-tag">Multi-page</span></div><h3>Black is Back</h3><p>Browser-based video tool that reframes footage into 16:9, 9:16, 1:1, 4:3 or 21:9 with a live canvas preview. Users choose to pad, crop, or stretch the frame, then export a real MP4 or WebM file straight from the browser. No uploads, no server — the entire conversion runs privately on the user's own device.</p></div>
+        </div>
+        <div class="wk">
+          <img src="assets/images/Ecommerce-Website-design.webp" alt="Ecommerce-Website-design" class="responsive-image">
+          <!--
+          <div class="wk-th" style="background:#08101f"><div class="wk-sc" style="background:#0d1a30"><div class="wk-si"><div class="wb" style="background:#60a5fa;width:48%"></div><div class="wb w80" style="margin-top:4px"></div><div class="wbs"><div class="wbl bl"></div><div class="wbl"></div><div class="wbl bl" style="opacity:.5"></div></div><div class="wb w40" style="margin-top:3px"></div></div></div></div>
+          -->
+          <div class="wk-inf"><div class="wk-tags"><span class="wk-tag">E-commerce</span><span class="wk-tag">Redesign</span></div><h3>Impokopoko Lifestyle</h3><p>Redesigned an outdated retail site — improved navigation structure, mobile layout, and product display for better conversions.</p></div>
+        </div>
+                <div class="wk">
+          <img src="assets/images/Responsive-Wep-Apps-South-Africa.webp" alt="Responsive-web-apps-South-Africa" class="responsive-image">
+          <!--
+          <div class="wk-th" style="background:var(--b900)"><div class="wk-sc" style="background:var(--b800)"><div class="wk-si"><div class="wb bl" style="width:42%"></div><div class="wb w60" style="margin-top:4px"></div><div class="wbs" style="grid-template-columns:1fr 1fr"><div class="wbl bl"></div><div class="wbl"></div></div></div></div></div>
+          -->
+          <div class="wk-inf"><div class="wk-tags"><span class="wk-tag">Task management Web App</span><span class="wk-tag">Productivity & Task Tracking</span></div><h3>TaskPro</h3><p>Modern task management application designed to boost productivity — task creation, voice input, task editing, reminders, premium features, and a clean, responsive interface built for seamless everyday planning</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cl-bg">
+    <section class="sec-sm">
+      <div class="wrap">
+        <div class="sh fu" style="margin-bottom:32px"><div class="ey">Companies We've Worked With</div><h2 class="sttl">Trusted by businesses<br><em>across South Africa.</em></h2></div>
+        <div class="cl-grid fu">
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🛒</div><div class="cl-nm">ShopNow</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🏥</div><div class="cl-nm">Sebenzani Global</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🏠</div><div class="cl-nm">Black is Back</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">⚖️</div><div class="cl-nm">Impokopoko LifeStyle</div></div></div>
+          <div class="cl-cell"><div class="cl-inn"><div class="cl-mk">🎨</div><div class="cl-nm">CreativeCo</div></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="cta"><h2>Want to see your business here?</h2><p>Let's discuss your project.</p><a href="#" class="btn-w" onclick="go('contact');return false">Start a Project →</a></div>
+</div>
+
+<!-- ══════ ABOUT ══════ -->
+<div class="page" id="page-about">
+  <section class="sec" style="padding-top:120px">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">About</div><h2 class="sttl">Built on structure,<br><em>driven by results.</em></h2><p class="ssub">HMPX Studio is a one-person digital studio focused on helping small businesses get online with clean, reliable, and purposeful websites.</p></div>
+      <div class="ab-grid fu">
+        <div>
+          <p style="font-size:1rem;color:var(--g600);line-height:1.82;margin-bottom:18px">HMPX Studio was founded by Michael Mokubung with a simple belief: small businesses deserve websites that are properly built — not cookie-cutter templates that look the same as everyone else.</p>
+          <p style="font-size:1rem;color:var(--g600);line-height:1.82;margin-bottom:18px">Based in South Africa, the studio specialises in handcrafted HTML/CSS websites with an emphasis on clean structure, clarity of design, and technical reliability. Every project is handled personally — from the first conversation to deployment and beyond.</p>
+          <p style="font-size:1rem;color:var(--g600);line-height:1.82;margin-bottom:36px">The mission is straightforward: help businesses establish a trustworthy online presence that supports long-term growth. No fluff. No bloat. Just work that performs.</p>
+          <div class="vals">
+            <div class="val-r"><div class="val-ic">🏗️</div><div><h4>Structure</h4><p>Every project is built on a solid technical foundation that can scale with your business.</p></div></div>
+            <div class="val-r"><div class="val-ic">✦</div><div><h4>Simplicity</h4><p>Clear design and straightforward solutions — no unnecessary complexity or confusion.</p></div></div>
+            <div class="val-r"><div class="val-ic">🤝</div><div><h4>Reliability</h4><p>We deliver what we promise, on time, with transparent communication throughout.</p></div></div>
+            <div class="val-r"><div class="val-ic">📈</div><div><h4>Growth</h4><p>Our work supports your business goals — not just aesthetics, but measurable outcomes.</p></div></div>
+          </div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-hd">
+            <div class="ab-av">MM</div>
+            <h3>Michael Mokubung</h3>
+            <p>Founder & Full-Stack Developer | Web, Cloud & IT Solutions Specialist · South Africa</p>
+          </div>
+          <div class="ab-bd">
+            <div class="sk-cat">
+              <div class="sk-cat-nm">Frontend</div>
+              <div class="sk-tags"><span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span><span class="sk-tag">JavaScript (ES6+)</span><span class="sk-tag">Tailwind CSS</span><span class="sk-tag">Bootstrap</span><span class="sk-tag">Responsive Design</span></div>
+            </div>
+            <div class="sk-cat">
+              <div class="sk-cat-nm">Backend</div>
+              <div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">PHP</span><span class="sk-tag">MySQL</span><span class="sk-tag">REST APIs</span></div>
+            </div>
+            <div class="sk-cat">
+              <div class="sk-cat-nm">Cloud & Infrastructure</div>
+              <div class="sk-tags"><span class="sk-tag">Microsoft Azure</span><span class="sk-tag">Microsoft 365</span><span class="sk-tag">DNS Management</span><span class="sk-tag">Web Hosting</span><span class="sk-tag">Domain Management</span></div>
+            </div>
+            <div class="sk-cat">
+              <div class="sk-cat-nm">Cybersecurity</div>
+              <div class="sk-tags"><span class="sk-tag">Identity & Access Management (IAM)</span><span class="sk-tag">Azure Security</span><span class="sk-tag">Network Security</span><span class="sk-tag">Security Best Practices</span></div>
+            </div>
+            <div class="sk-cat">
+              <div class="sk-cat-nm">CMS & E-Commerce</div>
+              <div class="sk-tags"><span class="sk-tag">WordPress</span><span class="sk-tag">WooCommerce</span><span class="sk-tag">Elementor</span><span class="sk-tag">Website Maintenance</span></div>
+            </div>
+            <div class="sk-cat">
+              <div class="sk-cat-nm">Tools & Workflow</div>
+              <div class="sk-tags"><span class="sk-tag">Git</span><span class="sk-tag">GitHub</span><span class="sk-tag">VS Code</span><span class="sk-tag">Netlify</span><span class="sk-tag">Figma</span><span class="sk-tag">XAMPP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mv-grid fu">
+        <div class="mv"><div class="ey">Mission</div><p class="mv-q">"To help small businesses establish a strong and trustworthy online presence through well-structured, purpose-driven websites."</p></div>
+        <div class="mv bl"><div class="ey">Vision</div><p class="mv-q">"To become a trusted digital partner for growing businesses by delivering web solutions that support long-term growth and stability."</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta"><h2>Want to work together?</h2><p>Get in touch and let's talk about your project.</p><a href="#" class="btn-w" onclick="go('contact');return false">Start the Conversation →</a></div>
+</div>
+
+<!-- ══════ REVIEWS ══════ -->
+<div class="page" id="page-reviews">
+  <section class="sec" style="padding-top:120px">
+    <div class="wrap">
+      <div class="sh fu"><div class="ey">Reviews</div><h2 class="sttl">What clients say<br><em>about working with us.</em></h2><p class="ssub">Real feedback from businesses we've helped get online. Sample testimonials shown below — updated as new projects wrap up.</p></div>
+      <div class="rev-grid fu">
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-q">"Michael took the time to understand our business before building anything. The site loads fast, looks professional, and we've had way more enquiries since it launched."</p>
+          <div class="rev-who">
+            <div class="rev-av">SG</div>
+            <div><div class="rev-nm">Sebenzani Global</div><div class="rev-role">Security Services</div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-q">"Our old site looked outdated and was hard to use on mobile. The redesign fixed both — clean layout, easy navigation, and it actually converts visitors into customers now."</p>
+          <div class="rev-who">
+            <div class="rev-av">IL</div>
+            <div><div class="rev-nm">Impokopoko Lifestyle</div><div class="rev-role">Retail & E-commerce</div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-q">"Communication was clear from day one — no jargon, no delays. We knew exactly what we were getting at every stage, and the final site matched the brief perfectly."</p>
+          <div class="rev-who">
+            <div class="rev-av">BB</div>
+            <div><div class="rev-nm">Black is Back</div><div class="rev-role">Home Services & Construction</div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-q">"Affordable, professional, and genuinely reliable. HMPX Studio handles our monthly updates so we never have to worry about the site falling behind."</p>
+          <div class="rev-who">
+            <div class="rev-av">SN</div>
+            <div><div class="rev-nm">ShopNow</div><div class="rev-role">Online Retail</div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-q">"What stood out was the structure — everything was planned before a single page was built. The end result feels intentional, not thrown together."</p>
+          <div class="rev-who">
+            <div class="rev-av">CC</div>
+            <div><div class="rev-nm">CreativeCo</div><div class="rev-role">Creative Agency</div></div>
+          </div>
+        </div>
+        <div class="rev-card rev-cta-card">
+          <div class="rev-cta-ic">🏗️</div>
+          <h3>Worked with HMPX Studio?</h3>
+          <p>We'd love to feature your feedback here. Get in touch to share your experience.</p>
+          <a href="#" class="btn-g" onclick="go('contact');return false">Leave a Review →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta"><h2>Ready to be our next success story?</h2><p>Let's build something you're proud to show off.</p><a href="#" class="btn-w" onclick="go('contact');return false">Start a Project →</a></div>
+</div>
+
+<!-- ══════ CONTACT ══════ -->
+<div class="page" id="page-contact">
+  <div class="ct-sec">
+    <div class="wrap">
+      <div class="ct-grid fu">
+        <div class="ct-l">
+          <div class="ey" style="color:var(--b300)"><span style="display:inline-block;width:18px;height:2px;background:var(--b400);vertical-align:middle;margin-right:8px"></span>Contact</div>
+          <h2>Let's build something<br><em>together.</em></h2>
+          <p>Ready to start? Have a question? Reach out — we respond within 24 hours.</p>
+          <div class="ct-ms">
+          <!--<a href="mailto:mmokubung32@gmail.com" class="ct-m"><div class="ct-mic">📧</div><div><div class="ct-ml">Email</div><div class="ct-mv">mmokubung32@gmail.com</div></div></a> -->
+            <a href="https://wa.me/27767477192?text=Hi%20HMPX%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="ct-m">
+              <div class="ct-mic">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.472-.149-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 01-1.511-5.26c.002-5.45 4.436-9.884 9.89-9.884 2.64.001 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.002 5.45-4.436 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.89c0 2.096.547 4.142 1.588 5.946L.057 24l6.304-1.654a11.89 11.89 0 005.683 1.448h.005c6.555 0 11.89-5.335 11.893-11.89a11.82 11.82 0 00-3.478-8.416"/>
+                </svg>
+              </div>
+              <div>
+                <div class="ct-ml">WhatsApp</div>
+                <div class="ct-mv">076 747 7192</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/michael-mokubung-772aa6170" target="_blank" class="ct-m"><div class="ct-mic">💼</div><div><div class="ct-ml">LinkedIn</div><div class="ct-mv">www.linkedin.com/in/michael-mokubung-772aa6170</div></div></a>
+            <a href="https://github.com/mmokubung32" target="_blank" class="ct-m"><div class="ct-mic">⚡</div><div><div class="ct-ml">GitHub</div><div class="ct-mv">github.com/mmokubung32</div></div></a>
+            <div class="ct-m"><div class="ct-mic">📍</div><div><div class="ct-ml">Location</div><div class="ct-mv">South Africa</div></div></div>
+          </div>
+        </div>
+        <div class="ct-form">
+          <div class="ct-form-ttl">Send a message</div>
+          <div class="fr">
+            <!--
+            <div class="fg"><label class="fl">First name</label><input type="text" class="fi" placeholder="Michael"/></div>
+            <div class="fg"><label class="fl">Last name</label><input type="text" class="fi" placeholder="Smith"/></div>
+            -->
+          </div>
+          <div class="fg"><label class="fl">Email address</label><input type="email" class="fi" placeholder="you@example.com"/></div>
+
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+            <input type="hidden" name="form-name" value="contact">
+
+            <!-- Netlify spam protection -->
+            <p hidden>
+              <label>
+                Don't fill this out:
+                <input name="bot-field">
+              </label>
             </p>
-            <div class="hero-btns">
-                <!--make GaW primary--> 
-                <a href="#contact" class="btn">Get a website</a>
-                <a href="#services" class="btn">View services</a>
+
+            <!-- Optional hidden fields -->
+            <input type="hidden" name="website" value="HMPX Studio">
+            <input type="hidden" name="source" value="Website Contact Form">
+            <div class="fg">
+              <label class="fl">Your Name</label>
+              <input
+                class="fi"
+                type="text"
+                name="name"
+                placeholder="John Smith"
+                autocomplete="name"
+                required>
             </div>
+            <!--
+            <div class="fg">
+              <label class="fl">Email</label>
+              <input
+                class="fi"
+                type="email"
+                name="email"
+                placeholder="john@example.com"
+                autocomplete="email"
+                required>
+            </div>
+            -->
+
+            <div class="fg">
+              <label class="fl">Service needed</label>
+
+              <select class="fs fi" name="service" required>
+                <option value="">Select a service…</option>
+                <option>Starter Website (1–3 pages)</option>
+                <option>Business Website (4–6 pages)</option>
+                <option>Website Redesign</option>
+                <option>Maintenance & Support</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="fg">
+              <label class="fl">Your Message</label>
+
+              <textarea
+                class="fta"
+                name="message"
+                placeholder="Tell me about your business and what you need…"
+                rows="2"
+                required></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-p"
+              style="width:100%;justify-content:center;padding:14px; margin-top:12px">
+                Send Message →
+            </button>
+
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section class="section services" id="services">
-        <div class="services-header">
-            <span class="section-lable">What We Do</span>
-            <h2></h2>
-        </div>
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div class="logo" style="color:var(--white)">HMP<span class="xb">X</span> Studio</div>
+      <p class="ft-brand-p">Structured web solutions for small businesses. Based in South Africa, serving clients everywhere.</p>
+    </div>
+    <div><div class="ft-ct">Navigate</div><div class="ft-lks"><a href="#" onclick="go('home');return false">Home</a><a href="#" onclick="go('services');return false">Services</a><a href="#" onclick="go('work');return false">Work</a><a href="#" onclick="go('about');return false">About</a><a href="#" onclick="go('reviews');return false">Reviews</a><a href="#" onclick="go('contact');return false">Contact</a></div></div>
+    <div><div class="ft-ct">Services</div><div class="ft-lks"><a href="#" onclick="go('services');return false">Website Design</a><a href="#" onclick="go('services');return false">Business Sites</a><a href="#" onclick="go('services');return false">Redesigns</a><a href="#" onclick="go('services');return false">Maintenance</a><a href="#" onclick="go('services');return false">SEO Setup</a></div></div>
+    <div><div class="ft-ct">Connect</div><div class="ft-lks"><a href="https://wa.me/27767477192?text=Hi%20HMPX%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.linkedin.com/in/michael-mokubung-772aa6170/" target="_blank">LinkedIn</a><a href="https://github.com/mmokubung32" target="_blank">GitHub</a></div></div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2026 HMPX Studio. All rights reserved.</span>
+    <span>Designed & built by Michael Mokubung · South Africa</span>
+  </div>
+</footer>
 
-        <div class="services-masonry">
-            <div class="service-card">
-                <h3 class="service-title">Website Design & Build</h3>
-                <p>Clean, responsive HTML/CSS websites built with structure and clarity.</p>
-            </div>
+  <div id="imageViewer">
+      <span id="closeViewer">&times;</span>
+      <img id="fullScreenImage">
+  </div>
 
-            <div class="service-card">
-                <h3 class="service-title">Business Websites</h3>
-                <p>Professional websites designed to represent your business properly online.</p>
-            </div>
+  <script src="assets/js/main.js"></script>
 
-            <div class="service-card">
-                <h3 class="service-title">Maintenance & Support</h3>
-                <p>Ongoing updates, improvements, and basic performance monitoring.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="process" id="process">
-        <div class="process-header">
-            <span class="section-lable">How we work</span>
-            <h2></h2>
-        </div>
-        <div class="process-masonry">
-            <div class="process-card">
-                <div class="process-number">01</div>
-                <h3>Plan</h3>
-                <p>We understand your business, goals, and content.</p>
-            </div>
-            <div class="process-card">
-                <div class="process-number">02</div>
-                <h3>Build</h3>
-                <p>We design and develop a structured, responsive website.</p>
-            </div>
-            <div class="process-card">
-                <div class="process-number">03</div>
-                <h3>Launch</h3>
-                <p>We test, refine, and deploy your site.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="packages">
-        <div class="packages-header">
-            <span class="section-lable">Website packages</span>
-            <p>Simple packages designed for small businesses.</p>
-        </div>
-        <div class="packages-masonry">
-            <div class="packages-card">
-                <h3>Starter Website</h3>
-                <ul>
-                    <li>1–3 page static website </li>
-                    <li>Mobile responsive design</li>
-                    <li>Contact form</li>
-                    <li>Basic SEO setup</li>
-                    <li>1 revision round</li>
-                </ul>
-                <a href="#contact" class="contact-link">Contact for pricing</a>
-            </div>
-            <div class="packages-card">
-                <h3>Business Website</h3>
-                <ul>
-                    <li>4–6 page static website  </li>
-                    <li>Custom layout & styling</li>
-                    <li>Mobile-first design</li>
-                    <li>Contact & inquiry forms</li>
-                    <li>SEO-ready structure</li>
-                    <li>2 revision rounds</li>
-                </ul>
-                <a href="#contact" class="contact-link">Contact for pricing</a>
-            </div>
-            <div class="packages-card">
-                <h3>Maintenance</h3>
-                <ul>
-                    <li>Content updates</li>
-                    <li>Minor layout changes</li>
-                    <li>Performance & uptime checks</li>
-                    <li>Basic security monitoring</li>
-                </ul>
-                <a href="#contact" class="contact-link">Contact for pricing</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio">
-        <h2 class="portfolio-title fade-in">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3 class="project-title">E-Commerce Platform</h3>
-                    <p class="project-description">A full-stack e-commerce solution built with React and Node.js, featuring secure payment processing and real-time inventory management.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a href="#" class="project-link secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3 class="project-title">Task Management App</h3>
-                    <p class="project-description">A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a href="#" class="project-link secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3 class="project-title">Weather Dashboard</h3>
-                    <p class="project-description">A responsive weather application with location-based forecasts, interactive maps, and beautiful data visualizations.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a href="#" class="project-link secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="contact-content">
-            <h2 class="section-title fade-in">Let's Work Together</h2>
-            <p class="contact-text fade-in">Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can create something amazing together.</p>
-            
-            <div class="contact-methods fade-in">
-                <a href="mailto:mmokubung32@gmail.com" class="contact-method" target="_blank" rel="noopener noreferrer">
-                    <div class="contact-icon">📧</div>
-                    <span>Email</span>
-                </a>
-                <a href="https://linkedin.com/in/michaelmokubung" class="contact-method" target="_blank" rel="noopener noreferrer">
-                    <div class="contact-icon">💼</div>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/mmokubung32" class="contact-method" target="_blank" rel="noopener noreferrer">
-                    <div class="contact-icon">⚡</div>
-                    <span>GitHub</span>
-                </a>
-            </div>
-
-            <a href="mailto:mmokubung32@gmail.com" class="btn btn-primary fade-in" target="_blank" rel="noopener noreferrer">Get In Touch</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <h4>HMPX Studio</h4>
-        <p>&copy; 2026 HMPX Studio</p>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
