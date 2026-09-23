@@ -559,3 +559,11 @@
       .wa-float { right: 16px; bottom: 16px; width: 48px; height: 48px; }
       .wa-float svg { width: 23px; height: 23px; }
   }
+
+.credit-link {
+  color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: .35rem;
+  transition: color .25s, gap .25s;
+}
+.credit-link:hover { color: var(--green); gap: .55rem; }
+.credit-link i { font-size: .7rem; transition: transform .25s; }
+.credit-link:hover i { transform: translateX(2px); }
